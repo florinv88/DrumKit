@@ -9,6 +9,7 @@ function Letter({ letter, musicName, song }) {
     const play = () => {
 
         setOn(prevState => !prevState)
+        song.currentTime = 0;
         song.play()
 
         setTimeout(() => {
